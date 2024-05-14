@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 // const uri = "mongodb+srv://slp_4th_sem:QQ6ZQFB0AmTuN2jK@cluster.mideftk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
-const uri = "mongodb+srv://slp_4th_sem:QQ6ZQFB0AmTuN2jK@cluster.mideftk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster.mideftk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
